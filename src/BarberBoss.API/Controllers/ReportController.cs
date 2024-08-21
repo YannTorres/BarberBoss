@@ -1,4 +1,5 @@
 ﻿using BarberBoss.Application.UseCases.Income.Reports.Excel;
+using BarberBoss.Application.UseCases.Income.Reports.PDF;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
@@ -28,7 +29,7 @@ public class ReportController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> GetPdf(
-        [FromServices] IGenerateIncomesReportExcelUseCase useCase,
+        [FromServices] IGenerateIncomesReportPdfUseCase useCase,
         [FromHeader] DateOnly dateOnly
     )
     {

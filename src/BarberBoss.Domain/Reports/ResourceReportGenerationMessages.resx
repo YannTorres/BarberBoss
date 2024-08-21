@@ -147,7 +147,7 @@
   <data name="TITLE" xml:space="preserve">
     <value>Title</value>
   </data>
-  <data name="TOTAL_EARNINGS_IN_WEEK" xml:space="preserve">
-    <value>total earnings in the week</value>
+  <data name="WEEKLY_REVENUE" xml:space="preserve">
+    <value>Weekly Revenue</value>
   </data>
 </root>

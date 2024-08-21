@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarberBoss.Exception", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarberBoss.Infrastructure", "src\BarberBoss.Infrastructure\BarberBoss.Infrastructure.csproj", "{E5FD77E1-9F72-49AD-AF0F-8F166E8303A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validator.Tests", "tests\Validator.Tests\Validator.Tests.csproj", "{41833A3A-FA1A-4B50-8DBD-87B0CC8FC519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTestUtilities", "CommonTestUtilities\CommonTestUtilities.csproj", "{083D91F7-9203-4EB9-ADFC-BA396DD34084}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{E5FD77E1-9F72-49AD-AF0F-8F166E8303A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5FD77E1-9F72-49AD-AF0F-8F166E8303A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5FD77E1-9F72-49AD-AF0F-8F166E8303A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41833A3A-FA1A-4B50-8DBD-87B0CC8FC519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41833A3A-FA1A-4B50-8DBD-87B0CC8FC519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41833A3A-FA1A-4B50-8DBD-87B0CC8FC519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41833A3A-FA1A-4B50-8DBD-87B0CC8FC519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{083D91F7-9203-4EB9-ADFC-BA396DD34084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{083D91F7-9203-4EB9-ADFC-BA396DD34084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{083D91F7-9203-4EB9-ADFC-BA396DD34084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{083D91F7-9203-4EB9-ADFC-BA396DD34084}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +72,8 @@ Global
 		{8291CD4D-6AF3-4730-897E-F0A4991CE2DB} = {431672D8-0C9C-48F2-9F81-C4248A5D89C2}
 		{2710C95A-B1F5-4EEF-8E9D-3475812613DC} = {431672D8-0C9C-48F2-9F81-C4248A5D89C2}
 		{E5FD77E1-9F72-49AD-AF0F-8F166E8303A5} = {431672D8-0C9C-48F2-9F81-C4248A5D89C2}
+		{41833A3A-FA1A-4B50-8DBD-87B0CC8FC519} = {95070A9B-1D61-4591-AE51-78350A092C3C}
+		{083D91F7-9203-4EB9-ADFC-BA396DD34084} = {95070A9B-1D61-4591-AE51-78350A092C3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80D312C1-5495-40CE-824B-BACE1AD3FA6E}
