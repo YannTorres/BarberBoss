@@ -4,5 +4,5 @@ using BarberBoss.Communication.Response;
 namespace BarberBoss.Application.UseCases.Income.Register;
 public interface IRegisterIncomeUseCase
 {
-    Task<ResponseRegisteredIncomeJson> Execute(RequestIncomeJson request);
+    Task<ResponseRegisteredIncomeJson> Execute(RequestRegisterIncomeJson request);
 }

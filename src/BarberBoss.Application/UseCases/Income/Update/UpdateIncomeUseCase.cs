@@ -17,7 +17,7 @@ public class UpdateIncomeUseCase : IUpdateIncomeUseCase
         _repository = repository;
         _mapper = mapper;
     }
-    public async Task Execute(int id, RequestIncomeJson request)
+    public async Task Execute(int id, RequestRegisterIncomeJson request)
     {
         Validator(request);
         
@@ -33,7 +33,7 @@ public class UpdateIncomeUseCase : IUpdateIncomeUseCase
         await _unitOfWork.Commit();
     }
 
-    public void Validator(RequestIncomeJson request)
+    public void Validator(RequestRegisterIncomeJson request)
     {
         var validator = new IncomeValidator();
 

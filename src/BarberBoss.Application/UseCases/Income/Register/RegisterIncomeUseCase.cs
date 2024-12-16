@@ -18,7 +18,7 @@ public class RegisterIncomeUseCase : IRegisterIncomeUseCase
         _mapper = mapper;
     }
 
-    public async Task<ResponseRegisteredIncomeJson> Execute(RequestIncomeJson request)
+    public async Task<ResponseRegisteredIncomeJson> Execute(RequestRegisterIncomeJson request)
     {
         Validator(request);
 
@@ -32,7 +32,7 @@ public class RegisterIncomeUseCase : IRegisterIncomeUseCase
 
     }
 
-    public void Validator(RequestIncomeJson request)
+    public void Validator(RequestRegisterIncomeJson request)
     {
         var validator = new IncomeValidator();
 

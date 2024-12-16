@@ -3,7 +3,7 @@ using BarberBoss.Exception;
 using FluentValidation;
 
 namespace BarberBoss.Application.UseCases.Income;
-public class IncomeValidator : AbstractValidator<RequestIncomeJson>
+public class IncomeValidator : AbstractValidator<RequestRegisterIncomeJson>
 {
     public IncomeValidator()
     {

@@ -5,11 +5,11 @@ using Bogus;
 namespace CommonTestUtilities.Requests;
 public static class RequestRegisterIncomeJsonBuilder
 {
-    public static RequestIncomeJson Build()
+    public static RequestRegisterIncomeJson Build()
     {
         var faker = new Faker();
 
-        return new Faker<RequestIncomeJson>()
+        return new Faker<RequestRegisterIncomeJson>()
             .RuleFor(r => r.Title, faker => faker.Commerce.ProductName())
             .RuleFor(r => r.Description, faker => faker.Commerce.ProductDescription())
             .RuleFor(r => r.Date, faker => faker.Date.Past())

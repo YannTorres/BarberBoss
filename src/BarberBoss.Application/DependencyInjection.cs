@@ -6,6 +6,8 @@ using BarberBoss.Application.UseCases.Income.Register;
 using BarberBoss.Application.UseCases.Income.Reports.Excel;
 using BarberBoss.Application.UseCases.Income.Reports.PDF;
 using BarberBoss.Application.UseCases.Income.Update;
+using BarberBoss.Application.UseCases.Users.Login;
+using BarberBoss.Application.UseCases.Users.Register;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BarberBoss.Application;
@@ -19,13 +21,21 @@ public static class DependencyInjection
 
     private static void AddUseCases(IServiceCollection services) 
     {
+        // Income UseCase Services
         services.AddScoped<IRegisterIncomeUseCase, RegisterIncomeUseCase>();
         services.AddScoped<IGetIncomeByIdUseCase, GetIncomeByIdUseCase>();
         services.AddScoped<IGetAllIncomesUseCase, GetAllIncomesUseCase>();
         services.AddScoped<IDeleteIncomeUseCase, DeleteIncomeUseCase>();
         services.AddScoped<IUpdateIncomeUseCase, UpdateIncomeUseCase>();
+
+        // Reports UseCase Services
         services.AddScoped<IGenerateIncomesReportExcelUseCase, GenerateIncomesReportExcelUseCase>();
         services.AddScoped<IGenerateIncomesReportPdfUseCase, GenerateIncomesReportPdfUseCase>();
+
+        // User UserCase Services
+        services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
+        services.AddScoped<ILoginUseCase, LoginUseCase>();
+
     }
 
     private static void AddAutoMapper(IServiceCollection services)

@@ -14,13 +14,21 @@ public class AutoMapping : Profile
 
     private void RequestToEntity()
     {
-        CreateMap<RequestIncomeJson, Income>();
+        // Income
+        CreateMap<RequestRegisterIncomeJson, Income>();
+        // User
+        CreateMap<RequestRegisterUserJson, User>()
+            .ForMember(dest => dest.Password, config => config.Ignore());
     }
 
     private void EntityToResponse()
     {
+        // Income
         CreateMap<Income, ResponseRegisteredIncomeJson>();
         CreateMap<Income, ResponseShortIncomeJson>();
         CreateMap<Income, ResponseExpenseJson>();
+
+        // User
+        CreateMap<User, ResponseRegisteredUserJson>();
     }
 }

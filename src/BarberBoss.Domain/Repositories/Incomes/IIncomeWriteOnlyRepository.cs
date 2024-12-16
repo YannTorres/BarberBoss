@@ -5,7 +5,7 @@ namespace BarberBoss.Domain.Repositories.Incomes;
 public interface IIncomeWriteOnlyRepository
 {
     /// <summary>
-    /// Function to add a new Income to the database
+    /// Function to add a new Income to the database.
     /// </summary>
     /// <param name="income"></param>
     /// <returns></returns>

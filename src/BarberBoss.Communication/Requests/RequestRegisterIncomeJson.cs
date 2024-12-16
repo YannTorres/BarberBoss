@@ -1,7 +1,7 @@
 ﻿using BarberBoss.Communication.Enums;
 
 namespace BarberBoss.Communication.Requests;
-public class RequestIncomeJson
+public class RequestRegisterIncomeJson
 {
     public string Title { get; set; } = string.Empty;
     public string? Description { get; set; }

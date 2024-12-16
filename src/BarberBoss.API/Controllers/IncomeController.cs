@@ -6,11 +6,13 @@ using BarberBoss.Application.UseCases.Income.Update;
 using BarberBoss.Communication.Requests;
 using BarberBoss.Communication.Response;
 using BarberBoss.Exception.ExceptionBase;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarberBoss.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class IncomeController : ControllerBase
 {
     [HttpPost]
@@ -18,7 +20,7 @@ public class IncomeController : ControllerBase
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> RegisterIncome
         ([FromServices] IRegisterIncomeUseCase useCase,
-         [FromBody] RequestIncomeJson request
+         [FromBody] RequestRegisterIncomeJson request
         )
     {
         var response = await useCase.Execute(request);
@@ -72,7 +74,7 @@ public class IncomeController : ControllerBase
     public async Task<IActionResult> UpdateIncome(
         [FromRoute] int id,
         [FromServices] IUpdateIncomeUseCase useCase,
-        [FromBody] RequestIncomeJson request
+        [FromBody] RequestRegisterIncomeJson request
         )
     {
         await useCase.Execute(id, request);
