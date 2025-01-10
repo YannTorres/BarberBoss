@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BarberBoss.Application.UseCases.Users;
-internal class PasswordValidator<T> : PropertyValidator<T, string>
+public class PasswordValidator<T> : PropertyValidator<T, string>
 {
     public override string Name => "Password Validator";
     protected override string GetDefaultMessageTemplate(string errorCode)

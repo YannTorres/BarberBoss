@@ -3,9 +3,11 @@ using BarberBoss.Domain.Repositories.Incomes;
 using BarberBoss.Domain.Repositories.User;
 using BarberBoss.Domain.Security.Cryptography;
 using BarberBoss.Domain.Security.Tokens;
+using BarberBoss.Domain.Services.LoggedUser;
 using BarberBoss.Infrastructure.DataAcess;
 using BarberBoss.Infrastructure.DataAcess.Repositories;
 using BarberBoss.Infrastructure.Security.Tokens;
+using BarberBoss.Infrastructure.Services.LoggedUser;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +22,7 @@ public static class DependencyInjection
         AddToken(serviceProvider, configuration);
 
         serviceProvider.AddScoped<IPasswordEncripter, Security.Cryptography.BCrypt>();
+        serviceProvider.AddScoped<ILoggedUser, LoggedUser>();
     }
     private static void AddToken(IServiceCollection service, IConfiguration configuration)
     {

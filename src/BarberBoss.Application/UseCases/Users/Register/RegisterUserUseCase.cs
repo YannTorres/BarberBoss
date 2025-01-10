@@ -9,7 +9,7 @@ using BarberBoss.Exception;
 using BarberBoss.Exception.ExceptionBase;
 
 namespace BarberBoss.Application.UseCases.Users.Register;
-internal class RegisterUserUseCase : IRegisterUserUseCase
+public class RegisterUserUseCase : IRegisterUserUseCase
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IUserWriteOnlyRepository _repositoryWriteOnly;
